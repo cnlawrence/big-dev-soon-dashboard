@@ -7,7 +7,15 @@ const count = ref(0);
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">{{ msg }}</h1>
+  <h1 class="text-3xl font-bold underline">{{ msg }} Bold</h1>
+  <h1 class="text-3xl underline">{{ msg }}</h1>
+  <div>
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+    <br />
+    a b d e f g h i j k l m n o p q r s t u v w x y z
+    <br />
+    1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) _ +
+  </div>
   <div class="text-[#FFD74B]">Yellow</div>
   <div class="text-yellow">Yellow</div>
   <div class="text-yellow-500">Yellow 500</div>
