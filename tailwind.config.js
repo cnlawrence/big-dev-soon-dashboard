@@ -11,12 +11,15 @@ export default {
         "light-green": "#B8E9D4",
         "dark-green": "#2CC483",
         blue: "#696FFB",
+        "dark-blue": "#1F214A",
       },
       fontFamily: {
         roboto: ["Roboto", "Roboto Bold", "sans-serif"],
         sans: ["Roboto", "Roboto Bold", "sans-serif"],
       },
+      fontWeight: {},
     },
   },
   plugins: [],
+  darkMode: "selector",
 };
