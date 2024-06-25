@@ -1,23 +1,14 @@
 <script setup lang="ts">
 import SidebarItem from "./SidebarItem.vue";
 
-let getData = () => {
-  return fetch("https://dummyjson.com/http/200")
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-};
-
 defineProps({
   isDrawerOpen: Boolean,
 });
-
-getData();
 </script>
 
 <template>
   <aside
-    :class="isDrawerOpen ? 'w-60' : 'w-20'"
-    class="fixed top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white dark:bg-dark-blue border-0 border-r-[.04em] border-black/[16%]"
+    class="fixed top-0 left-0 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white dark:bg-dark-blue border-0 border-r-[.04em] border-black/[16%]"
     aria-label="Sidebar"
   >
     <!-- drawer button -->
