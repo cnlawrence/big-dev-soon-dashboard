@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import SidebarItem from "./SidebarItem.vue";
 
 let getData = () => {
@@ -8,7 +7,9 @@ let getData = () => {
     .then((data) => console.log(data));
 };
 
-const isDrawerOpen = ref(true);
+defineProps({
+  isDrawerOpen: Boolean,
+});
 
 getData();
 </script>
@@ -16,12 +17,12 @@ getData();
 <template>
   <aside
     :class="isDrawerOpen ? 'w-60' : 'w-20'"
-    class="fixed top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white dark:bg-dark-blue border-0 border-r-[.04em] border-black/[40%]"
+    class="fixed top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white dark:bg-dark-blue border-0 border-r-[.04em] border-black/[16%]"
     aria-label="Sidebar"
   >
     <!-- drawer button -->
     <button
-      @click="isDrawerOpen = !isDrawerOpen"
+      @click="$emit('toggleDrawer')"
       :class="isDrawerOpen ? 'pl-4' : 'pl-2'"
       class="pt-4 pb-4 flex items-center"
     >
@@ -109,7 +110,7 @@ getData();
     <div class="h-full">
       <ul>
         <div
-          class="space-y-5 px-6 py-6 border-0 border-b-[.04em] border-black/[40%]"
+          class="space-y-5 px-6 py-6 border-0 border-b-[.04em] border-black/[16%]"
         >
           <SidebarItem label-name="Dashboard" :is-drawer-open="isDrawerOpen">
             <svg
@@ -169,7 +170,7 @@ getData();
           </SidebarItem>
         </div>
         <div
-          class="space-y-5 px-6 py-6 border-0 border-b-[.04em] border-black/[40%]"
+          class="space-y-5 px-6 py-6 border-0 border-b-[.04em] border-black/[16%]"
         >
           <SidebarItem label-name="Product" :is-drawer-open="isDrawerOpen">
             <svg
@@ -228,7 +229,7 @@ getData();
           </SidebarItem>
         </div>
         <div
-          class="space-y-5 px-6 py-6 border-0 border-b-[.04em] border-black/[40%]"
+          class="space-y-5 px-6 py-6 border-0 border-b-[.04em] border-black/[16%]"
         >
           <SidebarItem label-name="Settings" :is-drawer-open="isDrawerOpen">
             <svg
