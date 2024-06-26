@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NumberCard from "./NumberCard.vue";
+import SalesOverviewCard from "./SalesOverviewCard.vue";
 
 let getData = async () => {
   const res = await fetch("https://dummyjson.com/http/200");
@@ -36,6 +37,11 @@ getData();
       :compared-to-number="'8,75'"
       :is-positive="true"
     />
+  </div>
+  <!-- card row -->
+  <div class="flex w-full px-8 pt-8">
+    <!-- sales overview card -->
+    <SalesOverviewCard />
   </div>
 </template>
 <style scoped></style>
