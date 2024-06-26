@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="basis-3/5 border border-b-[.04em] border-black/[16%] rounded-lg py-5 pl-5"
-  >
+  <div class="border border-b-[.04em] border-black/[16%] rounded-lg py-5 pl-5">
     <!-- top row -->
     <div class="flex flex-col">
       <div class="flex h-16">

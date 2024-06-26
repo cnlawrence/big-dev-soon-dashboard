@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NumberCard from "./NumberCard.vue";
 import SalesOverviewCard from "./SalesOverviewCard.vue";
+import SalesByRegionCard from "./SalesByRegionCard.vue";
 
 let getData = async () => {
   const res = await fetch("https://dummyjson.com/http/200");
@@ -11,7 +12,7 @@ let getData = async () => {
 getData();
 </script>
 <template>
-  <!-- card row -->
+  <!-- card row 1 -->
   <div class="flex w-full px-8 pt-16 space-x-8">
     <NumberCard
       :title="'Total Income'"
@@ -38,10 +39,12 @@ getData();
       :is-positive="true"
     />
   </div>
-  <!-- card row -->
-  <div class="flex w-full px-8 pt-8">
+  <!-- card row 2 -->
+  <div class="flex w-full px-8 pt-8 space-x-8">
     <!-- sales overview card -->
-    <SalesOverviewCard />
+    <SalesOverviewCard class="basis-3/5" />
+    <!-- sales by region card -->
+    <SalesByRegionCard class="basis-2/5" />
   </div>
 </template>
 <style scoped></style>
