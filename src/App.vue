@@ -18,8 +18,8 @@ const isDrawerOpen = ref(true);
     </div>
     <!-- main -->
     <div class="flex-auto">
-      <TopNav class="flex" />
-      <Dashboard class="flex" />
+      <TopNav />
+      <Dashboard />
     </div>
   </div>
 </template>
