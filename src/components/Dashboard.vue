@@ -3,6 +3,7 @@ import NumberCard from "./NumberCard.vue";
 import SalesOverviewCard from "./SalesOverviewCard.vue";
 import SalesByRegionCard from "./SalesByRegionCard.vue";
 import RegisteredUsersCard from "./RegisteredUsersCard.vue";
+import IntegrationListCard from "./IntegrationListCard.vue";
 
 let getData = async () => {
   const res = await fetch("https://dummyjson.com/http/200");
@@ -50,6 +51,7 @@ getData();
   <!-- card row 3 -->
   <div class="flex w-full px-8 py-8 space-x-8">
     <RegisteredUsersCard class="basis-2/5" />
+    <IntegrationListCard class="basis-3/5" />
   </div>
 </template>
 <style scoped></style>
